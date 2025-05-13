@@ -1,0 +1,67 @@
+1) cd Desktop
+   
+   cd folder
+
+2)git init
+  
+  git remote add origin https://github.com/Dhruthi-shivani/lab2.git
+  
+   if error:  git remote remove origin
+
+   git remote add origin https://github.com/Dhruthi-shivani/lab2.git
+
+3)  git config --global user.email "vvce22ise0129@vvce.ac.in"
+
+4) git add .
+
+5) git commit -m "version1.0"
+
+6) git push -u origin main
+
+   if error :  git pull origin main --rebase
+
+  git push -u origin main
+
+7)  git branch -m main
+
+8) git branch b1
+
+    git checkout b1
+
+    nano f1.txt --- HII
+
+    git add f1.txt
+
+    git commit -m "v2"
+
+   git push -u origin b1
+
+9) git checkout main
+
+10) git checkout main
+
+11) git branch b2
+
+      git checkout b5
+  
+      git add f1.txt
+
+     nano f1.txt
+
+     git add f1.txt
+
+    git commit -m "v2"
+
+    git push -u origin b2
+
+12) git merge b1
+
+13) git merge --abort
+
+
+
+
+
+
+
+

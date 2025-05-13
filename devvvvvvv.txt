@@ -1,0 +1,117 @@
+7.SLACK
+
+https://my.slack.com/services/jenkins-ci
+REQURIMENT -slack, jenkins, link
+
+
+6.MAVEN
+
+-maven project - ise ,dev
+-pom.xml - 24 paste
+-maven repository - Jason
+-class name - demo
+
+package ise.dev;
+import java.io.FileReader;
+import java.io.IOException;
+
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
+public class demo {
+	public static void main(String[] args) throws IOException, ParseException {
+		JSONParser jsonparser = new JSONParser();
+		FileReader reader = new FileReader(".\\JSON\\demo.json");
+		Object obj = jsonparser.parse(reader);
+		JSONObject empjsonobj = (JSONObject)obj;
+		
+		String fname = (String) empjsonobj.get("firstname");
+		String lname = (String) empjsonobj.get("lastname");
+		
+		System.out.println("first name:"+fname);
+		System.out.println("Last name:"+lname);
+		}
+	}
+
+-pom.xml - folder name -JSON -File name demo.json
+
+{
+	"firstname" : "chandu",
+	"lastname" : "D"
+}
+
+REQURMENT - eclipe , browser(maven repository)
+
+
+5 and 4.DOCKER 
+
+-eclipe - launch with creating one new folder
+-class name - sample 
+
+package hi;
+
+public class hello {
+
+	public static void main(String[] args) {
+	   System.out.println("Hello hhhh");
+
+	}
+
+}
+
+- Docker file under class created
+
+FROM openjdk:21
+WORKDIR /app
+COPY hello.java /app/hi/hello.java
+RUN javac /app/hi/hello.java
+CMD ["java", "hi.hello"]
+
+-terminal - cd (then search in files for that )
+            docker build -t gggg .
+-vs code (open with create one folder)
+-f1.py , Dockerfile
+
+FROM python:3.12.9-slim
+WORKDIR /app
+COPY f1.py /app
+CMD ["python", "f1.py"]
+
+-terminal - docker build -t jjj .
+            docker login
+            docker run --name fff jjj
+            docker tag jjj inchu1234/ddd ( docker hub login , create new repository)
+            docker push docker.io/inchu1234/ddd:latest
+
+REQUREMENTS - docker , eclipe ,vs code , docker hub
+
+3. JENKINS
+
+
+-git hub login (select one repo create one java file)
+-open Jenkins
+-esc , shift + : ,wq , enter
+REQUIREMENTS - Jenkins , GitHub
+
+2.BRANCH
+
+git add "f1.txt"
+git commit -m "fgh"
+git merge branch1
+
+1. REVERT
+
+ git clone https://github.com/chandu280904/DBMS_PROJECT.git
+ ls
+ git rm ghgjhgf.txt
+ ls
+ git commit -m "dfg"
+ git log
+ git revert (code)
+ git push origin main
+
+
+
+
+

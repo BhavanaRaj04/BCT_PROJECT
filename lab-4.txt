@@ -1,0 +1,69 @@
+1) Eclipse:::
+
+File - switch workspace -
+        - create a folder on desktop and save the path
+
+Create - java project
+            -inside src
+                      - new package 
+                               - new class  - type program :
+                  
+                  package Dh;
+                  public class sum{
+                        public static void main(String[] args){
+                                      int num1=10;
+                                      int num2=12;
+                                      int sum=num1+num2;
+                                    System.out.println("sum is: "+sum);
+                       }
+                 }
+
+Create Docker file -
+
+            FROM openjdk
+           WORKDIR /app
+           COPY  sum.java src/dh/sum.java
+           RUN javac -d classes src/dh/sum.java
+           CMD ["java","-cp","classes","dh.sum"]
+
+Terminal of eclipse
+
+      -navigate folder path until package 
+      - docker build -t app-dh .
+
+Open Docker 
+
+    -Images
+    - Run the image
+    - output 
+
+
+MODIFICATION  in vscode
+
+p1.py:
+
+    a=10
+    b=20
+    sum=a+b
+    print(sum)
+
+docker file:
+
+     FROM python:3.12
+     WORKDIR /app
+     COPY sum.py /app/sum.py
+     CMD ["python","sum.py"]
+
+ Terminal of vscode
+
+      -navigate folder path until package 
+      - docker build -t app-dh .
+
+Open Docker 
+
+    -Images
+    - Run the image
+    - output 
+         
+
+

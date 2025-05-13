@@ -1,0 +1,31 @@
+1) cd Desktop
+   
+   cd folder
+
+2)git init  ##initialize 
+  
+  git remote add origin https://github.com/Dhruthi-shivani/lab2.git    ## Connects your local repo to GitHub.
+  
+   if error:  git remote remove origin
+
+   git remote add origin https://github.com/Dhruthi-shivani/lab2.git
+
+3)  git config --global user.email "vvce22ise0129@vvce.ac.in" 
+
+4) git add .      ##stage all changes in current directory 
+
+5) git commit -m "version1.0"      ## commit changes
+
+6) git status       ## This shows untracked files that are not yet committed.
+
+7) git log        ## Shows commit history and details.
+
+8) git remote add origin https://github.com/Dhruthi-shivani/lab2.git    ## Connects your local repo to GitHub.
+
+9)git push -u origin main    ##Uploads the local repository to GitHub. 
+
+10) git clone   "URL"
+
+11)git reset --soft HEAD~1     ##Moves HEAD back by one commit but keeps changes staged.
+
+
